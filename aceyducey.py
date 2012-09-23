@@ -5,7 +5,7 @@ Game written by Bill Palmby
 Translated into Python by Jacob Turner
 '''
 
-import random, sys
+import random
 
 print "Acey Duecy Card Game"
 print "by Bill Palmby"
@@ -72,9 +72,9 @@ while True:
             break
         elif bet == "q":
             print "OK. Hope you had fun!"
-            sys.exit(1)
-        else:
             break
+        else:
+            pass
     print "The card is a(n) " + str(c) + "."
     while c == "Jack" or "Queen" or "King" or "Ace":
         if c == "Jack":
@@ -101,6 +101,6 @@ while True:
                     q = 100
                 elif again == "no":
                     print "OK. Hope you had fun!"
-                    sys.exit(1) 
+                    break
                 else:
                     pass
