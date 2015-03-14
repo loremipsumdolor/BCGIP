@@ -5,4 +5,4 @@ This is a translation of the book "BASIC Computer Games" edited by David H. Ahl 
 
 These games were translated by [Jacob Turner], with the games themselves owned by the original coders.
 
-[Jacob Turner]: http://www.squaredpi.com
+[Jacob Turner]: http://jacobturner.me
