@@ -1,11 +1,23 @@
-'''
-Acey Ducey
-from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
-Game written by Bill Palmby
-Translated into Python by Jacob Turner
-'''
+##########
+# Acey Ducey
+# from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
+# Game written by Bill Palmby of Prairie View, Illinois
+# Translated into Python and updated by Jacob Turner
+##########
 
 import random
+
+def card_name(number):
+    if number == 11:
+        return "Jack"
+    elif number == 12:
+        return "Queen"
+    elif number == 13:
+        return "King"
+    elif number == 14:
+        return "Ace"
+    else:
+        return str(number)
 
 print "Acey Duecy Card Game"
 print "by Bill Palmby"
@@ -18,7 +30,6 @@ print "a value between the first two."
 print "If you do not want to bet, input a 0."
 print "Input q to quit at any time."
 print
-n = 100
 q = 100
 while True:
     print "You now have $" + str(q) + "."
@@ -31,40 +42,18 @@ while True:
             pass
         else:
             break
-    while a or b or c == 11 or 12 or 13 or 14:
-        if a == 11:
-            a = "Jack"
-        elif a == 12:
-            a = "Queen"
-        elif a == 13:
-            a = "King"
-        elif a == 14:
-            a = "Ace"
-        elif b == 11:
-            b = "Jack"
-        elif b == 12:
-            b = "Queen"
-        elif b == 13:
-            b = "King"
-        elif b == 14:
-            b = "Ace"
-        elif c == 11:
-            c = "Jack"
-        elif c == 12:
-            c = "Queen"
-        elif c == 13:
-            c = "King"
-        elif c == 14:
-            c = "Ace"
-        else:
-            break
     print "Here are your next two cards:"
-    print str(a) + " and " + str(b)
+    print card_name(a) + " and " + card_name(b)
     print
     while True:
-        print "What is your bet?"
-        bet = raw_input("> ")
-        if bet < q:
+        while True:
+            bet = raw_input("What is your bet? $")
+            if bet.isdigit():
+                bet = int(bet)
+                break
+            else:
+                print "Invalid input, please try again."
+        if bet > q:
             print "Sorry my friend, but you bet too much."
             print "You only have $" + str(q) + " to bet."
         elif bet == 0:
@@ -74,33 +63,26 @@ while True:
             print "OK. Hope you had fun!"
             break
         else:
-            pass
-    print "The card is a(n) " + str(c) + "."
-    while c == "Jack" or "Queen" or "King" or "Ace":
-        if c == "Jack":
-            c = 11
-        elif c == "Queen":
-            c = 12
-        elif c == "King":
-            c = 13
-        elif c == "Ace":
-            c = 14
-        else:
             break
-    if c > a and c <= b:
-        print "You win!"
-        q = q + int(bet)
+    print "The card is a(n) " + card_name(c) + "."
+    if a < c < b:
+        if bet == 0:
+            print "Nothing changes."
+        else:
+            print "You win!"
+            q = q + bet
     else:
-        print "Sorry, you lose."
-        q = q - int(bet)
+        if bet != 0:
+            print "Sorry, you lose."
+            q = q - bet
+        else:
+            print "Nothing changes."
         if q == 0:
-            while True:
-                print "Try again? (yes or no)"
-                again = raw_input("> ")
-                if again == "yes":
-                    q = 100
-                elif again == "no":
-                    print "OK. Hope you had fun!"
-                    break
-                else:
-                    pass
+            again = raw_input("Try again? (yes or no) ")
+            if again == "yes":
+                q = 100
+            elif again == "no":
+                print "OK. Hope you had fun!"
+                break
+        else:
+            pass

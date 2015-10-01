@@ -1,9 +1,9 @@
-'''
-Change
-from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
-Game written by Dennis Lunder
-Translated into Python by Jacob Turner
-'''
+##########
+# Change
+# from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
+# Game written by Dennis Lunder, People's Computer Company
+# Translated into Python and updated by Jacob Turner
+##########
 
 print "Change"
 print "by Dennis Lunder"
@@ -16,9 +16,9 @@ p = float(raw_input("Amount of payment: "))
 c = p - a
 m = c
 if c < 0:
-    sc = a - p
-    print "You have shortchanged me $%.2f" % sc
-print "Your change: $%.2f" % c
+    print "You have shortchanged me $" + str(a - p) + "!"
+    break
+print "Your change: $" + str(c)
 d = int(c / 10)
 if d > 0:
     print str(d) + " Ten dollar bill(s)"
@@ -49,7 +49,7 @@ if j > 0:
     print str(j) + " Nickel(s)"
 c = n - (g * 50 + h * 25 + i * 10 + j * 5)
 k = int(c + .5)
-if k > 0 and k < 1:
+if k == 1:
     print str(k) + " Penny"
 elif k > 2:
     print str(k) + " Pennies"
