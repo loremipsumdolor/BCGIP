@@ -1,6 +1,6 @@
 ##########
 # Dice
-# from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
+# from BASIC Computer Games Microcomputer Edition edited by David H. Ahl
 # Game written by Daniel Freidus, Harrison, New York
 # Translated into Python and updated by Jacob Turner
 ##########
@@ -22,10 +22,11 @@ while 'x' not in vars():
         x = int(x)
         break
     else:
+        print "Invalid number. Please try again."
         del x
 for s in range(0, x):
-    a = random.randrange(1, 7, 1)
-    b = random.randrange(1, 7, 1)
+    a = random.randint(1, 6)
+    b = random.randint(1, 6)
     r = a + b - 1
     f[r] = f[r] + 1
 print "Total Spots - Number of Spots"

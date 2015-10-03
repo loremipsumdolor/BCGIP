@@ -1,7 +1,7 @@
 ##########
 # Acey Ducey
-# from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
-# Game written by Bill Palmby of Prairie View, Illinois
+# from BASIC Computer Games Microcomputer Edition edited by David H. Ahl
+# Game written by Bill Palmby, Prairie View, Illinois
 # Translated into Python and updated by Jacob Turner
 ##########
 

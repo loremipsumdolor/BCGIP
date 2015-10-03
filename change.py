@@ -1,6 +1,6 @@
 ##########
 # Change
-# from the BASIC Computer Games Microcomputer Edition edited by David H. Ahl
+# from BASIC Computer Games Microcomputer Edition edited by David H. Ahl
 # Game written by Dennis Lunder, People's Computer Company
 # Translated into Python and updated by Jacob Turner
 ##########
