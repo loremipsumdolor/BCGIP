@@ -10,7 +10,7 @@ import random
 print "Dice"
 print "by Daniel Freidus"
 print
-f = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+f = [0] * 12
 print "This program simulates the rolling of a pair of dice."
 print "You enter the number of times you want the computer to"
 print "'roll' the dice. Watch out, very large numbers take"
